@@ -47,6 +47,7 @@ public class ProfControlJPanel extends javax.swing.JPanel {
         btnListUser = new javax.swing.JButton();
         btnSearch = new javax.swing.JButton();
         lblControl = new javax.swing.JLabel();
+        btnSearch1 = new javax.swing.JButton();
         AdminView = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(200, 16, 46));
@@ -74,7 +75,7 @@ public class ProfControlJPanel extends javax.swing.JPanel {
         btnListUser.setBackground(new java.awt.Color(200, 16, 46));
         btnListUser.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnListUser.setForeground(new java.awt.Color(255, 255, 255));
-        btnListUser.setText("List User");
+        btnListUser.setText("List Courses");
         btnListUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnListUserActionPerformed(evt);
@@ -96,6 +97,16 @@ public class ProfControlJPanel extends javax.swing.JPanel {
         lblControl.setForeground(new java.awt.Color(200, 16, 46));
         lblControl.setText("Professor Control");
 
+        btnSearch1.setBackground(new java.awt.Color(200, 16, 46));
+        btnSearch1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnSearch1.setForeground(new java.awt.Color(255, 255, 255));
+        btnSearch1.setText("Profile Info");
+        btnSearch1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearch1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout AdminControlLayout = new javax.swing.GroupLayout(AdminControl);
         AdminControl.setLayout(AdminControlLayout);
         AdminControlLayout.setHorizontalGroup(
@@ -107,11 +118,12 @@ public class ProfControlJPanel extends javax.swing.JPanel {
                     .addComponent(btnProfMangSchedule)
                     .addComponent(btnListUser)
                     .addComponent(btnSearch)
-                    .addComponent(lblControl))
+                    .addComponent(lblControl)
+                    .addComponent(btnSearch1))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        AdminControlLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnListUser, btnProfAddCourse, btnProfMangSchedule, btnSearch});
+        AdminControlLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnListUser, btnProfAddCourse, btnProfMangSchedule, btnSearch, btnSearch1});
 
         AdminControlLayout.setVerticalGroup(
             AdminControlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -126,6 +138,8 @@ public class ProfControlJPanel extends javax.swing.JPanel {
                 .addComponent(btnListUser)
                 .addGap(30, 30, 30)
                 .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(47, 47, 47)
+                .addComponent(btnSearch1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -188,6 +202,10 @@ public class ProfControlJPanel extends javax.swing.JPanel {
         SplitProfPane.setRightComponent(adminSearch);
     }//GEN-LAST:event_btnSearchActionPerformed
 
+    private void btnSearch1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearch1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSearch1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AdminControl;
@@ -197,6 +215,7 @@ public class ProfControlJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnProfAddCourse;
     private javax.swing.JButton btnProfMangSchedule;
     private javax.swing.JButton btnSearch;
+    private javax.swing.JButton btnSearch1;
     private javax.swing.JLabel lblControl;
     // End of variables declaration//GEN-END:variables
 

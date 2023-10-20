@@ -41,30 +41,34 @@ public class StduentJPanel extends javax.swing.JPanel {
 
         UserSplitPane = new javax.swing.JSplitPane();
         UserControl = new javax.swing.JPanel();
-        btnViewUser = new javax.swing.JButton();
-        btnUpdateUser = new javax.swing.JButton();
+        btnStudView = new javax.swing.JButton();
+        btnStudCrEnrolled = new javax.swing.JButton();
         lblControl = new javax.swing.JLabel();
+        btnStudTranscripts = new javax.swing.JButton();
+        btnUpdateUser2 = new javax.swing.JButton();
+        btnStudExploreCr = new javax.swing.JButton();
+        btnUpdateUser4 = new javax.swing.JButton();
         UserWorkArea = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(247, 247, 247));
 
-        btnViewUser.setBackground(new java.awt.Color(200, 16, 46));
-        btnViewUser.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnViewUser.setForeground(new java.awt.Color(255, 255, 255));
-        btnViewUser.setText("View Info");
-        btnViewUser.addActionListener(new java.awt.event.ActionListener() {
+        btnStudView.setBackground(new java.awt.Color(200, 16, 46));
+        btnStudView.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnStudView.setForeground(new java.awt.Color(255, 255, 255));
+        btnStudView.setText("Student Info");
+        btnStudView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewUserActionPerformed(evt);
+                btnStudViewActionPerformed(evt);
             }
         });
 
-        btnUpdateUser.setBackground(new java.awt.Color(200, 16, 46));
-        btnUpdateUser.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnUpdateUser.setForeground(new java.awt.Color(255, 255, 255));
-        btnUpdateUser.setText("Update Info");
-        btnUpdateUser.addActionListener(new java.awt.event.ActionListener() {
+        btnStudCrEnrolled.setBackground(new java.awt.Color(200, 16, 46));
+        btnStudCrEnrolled.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnStudCrEnrolled.setForeground(new java.awt.Color(255, 255, 255));
+        btnStudCrEnrolled.setText("Courses Enrolled");
+        btnStudCrEnrolled.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateUserActionPerformed(evt);
+                btnStudCrEnrolledActionPerformed(evt);
             }
         });
 
@@ -73,6 +77,46 @@ public class StduentJPanel extends javax.swing.JPanel {
         lblControl.setForeground(new java.awt.Color(200, 16, 46));
         lblControl.setText("Welcome Student");
 
+        btnStudTranscripts.setBackground(new java.awt.Color(200, 16, 46));
+        btnStudTranscripts.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnStudTranscripts.setForeground(new java.awt.Color(255, 255, 255));
+        btnStudTranscripts.setText("Transcript");
+        btnStudTranscripts.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnStudTranscriptsActionPerformed(evt);
+            }
+        });
+
+        btnUpdateUser2.setBackground(new java.awt.Color(200, 16, 46));
+        btnUpdateUser2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnUpdateUser2.setForeground(new java.awt.Color(255, 255, 255));
+        btnUpdateUser2.setText("Extra Key");
+        btnUpdateUser2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateUser2ActionPerformed(evt);
+            }
+        });
+
+        btnStudExploreCr.setBackground(new java.awt.Color(200, 16, 46));
+        btnStudExploreCr.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnStudExploreCr.setForeground(new java.awt.Color(255, 255, 255));
+        btnStudExploreCr.setText("Explore Courses");
+        btnStudExploreCr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnStudExploreCrActionPerformed(evt);
+            }
+        });
+
+        btnUpdateUser4.setBackground(new java.awt.Color(0, 0, 0));
+        btnUpdateUser4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnUpdateUser4.setForeground(new java.awt.Color(255, 255, 255));
+        btnUpdateUser4.setText("Graduate");
+        btnUpdateUser4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateUser4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout UserControlLayout = new javax.swing.GroupLayout(UserControl);
         UserControl.setLayout(UserControlLayout);
         UserControlLayout.setHorizontalGroup(
@@ -80,27 +124,40 @@ public class StduentJPanel extends javax.swing.JPanel {
             .addGroup(UserControlLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(UserControlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(btnUpdateUser)
-                    .addComponent(btnViewUser)
-                    .addComponent(lblControl))
+                    .addComponent(btnStudCrEnrolled)
+                    .addComponent(btnStudView)
+                    .addComponent(lblControl)
+                    .addComponent(btnStudTranscripts)
+                    .addGroup(UserControlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                        .addComponent(btnStudExploreCr)
+                        .addComponent(btnUpdateUser2)
+                        .addComponent(btnUpdateUser4)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        UserControlLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnUpdateUser, btnViewUser});
+        UserControlLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnStudCrEnrolled, btnStudExploreCr, btnStudTranscripts, btnStudView, btnUpdateUser2});
 
         UserControlLayout.setVerticalGroup(
             UserControlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(UserControlLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(lblControl)
-                .addGap(98, 98, 98)
-                .addComponent(btnViewUser)
+                .addGap(59, 59, 59)
+                .addComponent(btnStudView)
                 .addGap(40, 40, 40)
-                .addComponent(btnUpdateUser, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(251, Short.MAX_VALUE))
+                .addComponent(btnStudCrEnrolled, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(btnStudTranscripts, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(btnStudExploreCr, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(btnUpdateUser2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(btnUpdateUser4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
 
-        UserControlLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnUpdateUser, btnViewUser});
+        UserControlLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnStudCrEnrolled, btnStudExploreCr, btnStudTranscripts, btnStudView, btnUpdateUser2});
 
         UserSplitPane.setLeftComponent(UserControl);
 
@@ -131,15 +188,15 @@ public class StduentJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnViewUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewUserActionPerformed
+    private void btnStudViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStudViewActionPerformed
         // TODO add your handling code here:
         
         StudentViewJPanel userView = new StudentViewJPanel();
         UserSplitPane.setRightComponent(userView);
         
-    }//GEN-LAST:event_btnViewUserActionPerformed
+    }//GEN-LAST:event_btnStudViewActionPerformed
 
-    private void btnUpdateUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateUserActionPerformed
+    private void btnStudCrEnrolledActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStudCrEnrolledActionPerformed
         PersonLogin userToDisplay = history.getCurrentUser();
 
         // Create an instance of StudentUpdateJPanel and pass the user information
@@ -153,15 +210,35 @@ public class StduentJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "User not found or not logged in. Please log in or try again.");
         }
         
-    }//GEN-LAST:event_btnUpdateUserActionPerformed
+    }//GEN-LAST:event_btnStudCrEnrolledActionPerformed
+
+    private void btnStudTranscriptsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStudTranscriptsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnStudTranscriptsActionPerformed
+
+    private void btnUpdateUser2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateUser2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUpdateUser2ActionPerformed
+
+    private void btnStudExploreCrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStudExploreCrActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnStudExploreCrActionPerformed
+
+    private void btnUpdateUser4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateUser4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUpdateUser4ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel UserControl;
     private javax.swing.JSplitPane UserSplitPane;
     private javax.swing.JPanel UserWorkArea;
-    private javax.swing.JButton btnUpdateUser;
-    private javax.swing.JButton btnViewUser;
+    private javax.swing.JButton btnStudCrEnrolled;
+    private javax.swing.JButton btnStudExploreCr;
+    private javax.swing.JButton btnStudTranscripts;
+    private javax.swing.JButton btnStudView;
+    private javax.swing.JButton btnUpdateUser2;
+    private javax.swing.JButton btnUpdateUser4;
     private javax.swing.JLabel lblControl;
     // End of variables declaration//GEN-END:variables
 
