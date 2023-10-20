@@ -43,7 +43,7 @@ public class AdminSearchJPanel extends javax.swing.JPanel {
         txtUserID = new javax.swing.JTextField();
         txtNUID = new javax.swing.JTextField();
         lblNUID = new javax.swing.JLabel();
-        lblUserName = new javax.swing.JLabel();
+        lblStudentName = new javax.swing.JLabel();
         txtUserName = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(255, 51, 51));
@@ -99,10 +99,10 @@ public class AdminSearchJPanel extends javax.swing.JPanel {
         lblNUID.setForeground(new java.awt.Color(255, 255, 255));
         lblNUID.setText("NUID:");
 
-        lblUserName.setBackground(new java.awt.Color(204, 204, 204));
-        lblUserName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblUserName.setForeground(new java.awt.Color(255, 255, 255));
-        lblUserName.setText("User Name:");
+        lblStudentName.setBackground(new java.awt.Color(204, 204, 204));
+        lblStudentName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblStudentName.setForeground(new java.awt.Color(255, 255, 255));
+        lblStudentName.setText("Student Name:");
 
         txtUserName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,7 +125,7 @@ public class AdminSearchJPanel extends javax.swing.JPanel {
                     .addGap(58, 58, 58)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(lblUserName)
+                            .addComponent(lblStudentName)
                             .addGap(49, 49, 49)
                             .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
@@ -141,7 +141,7 @@ public class AdminSearchJPanel extends javax.swing.JPanel {
                             .addGap(122, 122, 122)
                             .addComponent(txtNUID, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(lblViewUser))
-                    .addContainerGap(259, Short.MAX_VALUE)))
+                    .addContainerGap(238, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -157,7 +157,7 @@ public class AdminSearchJPanel extends javax.swing.JPanel {
                     .addComponent(lblViewUser, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(57, 57, 57)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblStudentName, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -221,8 +221,8 @@ public class AdminSearchJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSearchID;
     private javax.swing.JLabel lblNUID;
+    private javax.swing.JLabel lblStudentName;
     private javax.swing.JLabel lblUserID;
-    private javax.swing.JLabel lblUserName;
     private javax.swing.JLabel lblUserPassword;
     private javax.swing.JLabel lblViewUser;
     private javax.swing.JTextField txtNUID;
