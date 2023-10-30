@@ -39,7 +39,7 @@ public class StduentJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        UserSplitPane = new javax.swing.JSplitPane();
+        StudentSplitPane = new javax.swing.JSplitPane();
         UserControl = new javax.swing.JPanel();
         btnStudView = new javax.swing.JButton();
         btnStudCrEnrolled = new javax.swing.JButton();
@@ -128,10 +128,9 @@ public class StduentJPanel extends javax.swing.JPanel {
                     .addComponent(btnStudView)
                     .addComponent(lblControl)
                     .addComponent(btnStudTranscripts)
-                    .addGroup(UserControlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                        .addComponent(btnStudExploreCr)
-                        .addComponent(btnUpdateUser2)
-                        .addComponent(btnUpdateUser4)))
+                    .addComponent(btnStudExploreCr)
+                    .addComponent(btnUpdateUser2)
+                    .addComponent(btnUpdateUser4))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -159,9 +158,9 @@ public class StduentJPanel extends javax.swing.JPanel {
 
         UserControlLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnStudCrEnrolled, btnStudExploreCr, btnStudTranscripts, btnStudView, btnUpdateUser2});
 
-        UserSplitPane.setLeftComponent(UserControl);
+        StudentSplitPane.setLeftComponent(UserControl);
 
-        UserWorkArea.setBackground(new java.awt.Color(200, 16, 46));
+        UserWorkArea.setBackground(new java.awt.Color(0, 153, 255));
 
         javax.swing.GroupLayout UserWorkAreaLayout = new javax.swing.GroupLayout(UserWorkArea);
         UserWorkArea.setLayout(UserWorkAreaLayout);
@@ -174,17 +173,17 @@ public class StduentJPanel extends javax.swing.JPanel {
             .addGap(0, 500, Short.MAX_VALUE)
         );
 
-        UserSplitPane.setRightComponent(UserWorkArea);
+        StudentSplitPane.setRightComponent(UserWorkArea);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(UserSplitPane)
+            .addComponent(StudentSplitPane)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(UserSplitPane)
+            .addComponent(StudentSplitPane)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -192,28 +191,36 @@ public class StduentJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         
         StudentInfoJPanel userView = new StudentInfoJPanel();
-        UserSplitPane.setRightComponent(userView);
+        StudentSplitPane.setRightComponent(userView);
         
     }//GEN-LAST:event_btnStudViewActionPerformed
 
     private void btnStudCrEnrolledActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStudCrEnrolledActionPerformed
-        PersonLogin userToDisplay = history.getCurrentUser();
-
-        // Create an instance of StudentUpdateJPanel and pass the user information
-        if (userToDisplay != null) {
-            StudentUpdateJPanel userUpdate = new StudentUpdateJPanel(userToDisplay);
-            UserSplitPane.setRightComponent(userUpdate);
-        } else {
-            // Handle the case when the user is not logged in or userToDisplay is null.
-            // You can show an error message or take appropriate action.
-            // For example, you can display an error dialog.
-            JOptionPane.showMessageDialog(this, "User not found or not logged in. Please log in or try again.");
-        }
+        StudentCoursesEnrolledJPanel panelcrenroll = new StudentCoursesEnrolledJPanel();
+        StudentSplitPane.setRightComponent(panelcrenroll);
         
+        
+//        PersonLogin userToDisplay = history.getCurrentUser();
+//        
+//
+//        // Create an instance of StudentUpdateJPanel and pass the user information
+//        if (userToDisplay != null) {
+//            StudentUpdateJPanel userUpdate = new StudentUpdateJPanel(userToDisplay);
+//            UserSplitPane.setRightComponent(userUpdate);
+//        } else {
+//            // Handle the case when the user is not logged in or userToDisplay is null.
+//            // You can show an error message or take appropriate action.
+//            // For example, you can display an error dialog.
+//            JOptionPane.showMessageDialog(this, "User not found or not logged in. Please log in or try again.");
+//        }
+//        
     }//GEN-LAST:event_btnStudCrEnrolledActionPerformed
 
     private void btnStudTranscriptsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStudTranscriptsActionPerformed
         // TODO add your handling code here:
+        StudentTranscriptJPanel paneltranscipt = new  StudentTranscriptJPanel();
+        StudentSplitPane.setRightComponent(paneltranscipt);
+        
     }//GEN-LAST:event_btnStudTranscriptsActionPerformed
 
     private void btnUpdateUser2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateUser2ActionPerformed
@@ -222,6 +229,8 @@ public class StduentJPanel extends javax.swing.JPanel {
 
     private void btnStudExploreCrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStudExploreCrActionPerformed
         // TODO add your handling code here:
+        StudentExploreCourseJPanel panel = new StudentExploreCourseJPanel();
+        StudentSplitPane.setRightComponent(panel);
     }//GEN-LAST:event_btnStudExploreCrActionPerformed
 
     private void btnUpdateUser4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateUser4ActionPerformed
@@ -230,8 +239,8 @@ public class StduentJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JSplitPane StudentSplitPane;
     private javax.swing.JPanel UserControl;
-    private javax.swing.JSplitPane UserSplitPane;
     private javax.swing.JPanel UserWorkArea;
     private javax.swing.JButton btnStudCrEnrolled;
     private javax.swing.JButton btnStudExploreCr;

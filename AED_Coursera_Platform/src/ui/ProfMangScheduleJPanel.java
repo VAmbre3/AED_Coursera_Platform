@@ -26,7 +26,7 @@ public class ProfMangScheduleJPanel extends javax.swing.JPanel {
     public ProfMangScheduleJPanel() {
         initComponents();
         
-        history = PersonHistoryServiceImpl.getInstance();         
+        //history = PersonHistoryServiceImpl.getInstance();         
         populateTable();
         
         
@@ -59,7 +59,6 @@ public class ProfMangScheduleJPanel extends javax.swing.JPanel {
         CBPrerequisites = new javax.swing.JComboBox<>();
         lblPrerequisites = new javax.swing.JLabel();
         lblMaxEnrollments = new javax.swing.JLabel();
-        txtMaxEnrollments = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(255, 51, 51));
 
@@ -154,12 +153,6 @@ public class ProfMangScheduleJPanel extends javax.swing.JPanel {
         lblMaxEnrollments.setForeground(new java.awt.Color(255, 255, 255));
         lblMaxEnrollments.setText("Maximum Enrollments:");
 
-        txtMaxEnrollments.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtMaxEnrollmentsActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -174,44 +167,44 @@ public class ProfMangScheduleJPanel extends javax.swing.JPanel {
                             .addComponent(lblPrerequisites)
                             .addComponent(lblMaxEnrollments))
                         .addGap(89, 89, 89)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(CBPrerequisites, 0, 203, Short.MAX_VALUE)
-                            .addComponent(txtMaxEnrollments)))
+                        .addComponent(CBPrerequisites, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(lblManageUser)
                             .addGap(301, 301, 301))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblCourseName, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(lblCourseSchedule, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(60, 60, 60))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(CBmonday, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(lblCourseName, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(60, 60, 60))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(lblCourseSchedule, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(27, 27, 27))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(CBmonday, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(txtAddCourseName, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(112, 112, 112)))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(btnProfViewCr)
+                                        .addComponent(btnProfDeleteCr)
+                                        .addComponent(btnProfUpdateCr, javax.swing.GroupLayout.Alignment.LEADING)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(CBtuesday)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(CBthursday, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(CBfriday)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(CBwednesday, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(txtAddCourseName, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(112, 112, 112)))
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(btnProfViewCr)
-                                            .addComponent(btnProfDeleteCr)
-                                            .addComponent(btnProfUpdateCr, javax.swing.GroupLayout.Alignment.LEADING)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(CBtuesday)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(CBthursday, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                        .addComponent(CBwednesday, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                 .addContainerGap(441, Short.MAX_VALUE))
         );
 
@@ -256,9 +249,7 @@ public class ProfMangScheduleJPanel extends javax.swing.JPanel {
                     .addComponent(lblPrerequisites, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CBPrerequisites, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtMaxEnrollments, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblMaxEnrollments, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(lblMaxEnrollments, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(118, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -276,22 +267,22 @@ public class ProfMangScheduleJPanel extends javax.swing.JPanel {
         PersonLogin person = history.getPerson().get(selectedRowIndex);
 
         // Retrieve updated values from text fields
-        String updatedUserName = txtUserName.getText();
-        String updatedNUID = txtNUID.getText();
-        String updatedUserID = txtUserID.getText();
-        String updatedPassword = txtUserPassword.getText(); // You might want to encrypt it here if needed
+//        String updatedUserName = txtUserName.getText();
+//        String updatedNUID = txtNUID.getText();
+//        String updatedUserID = txtUserID.getText();
+//        String updatedPassword = txtUserPassword.getText(); // You might want to encrypt it here if needed
 
         // Update the PersonLogin object
-        person.setUserName(updatedUserName);
-        person.setNuID(updatedNUID);
-        person.setUserID(updatedUserID);
-        person.setPassword(updatedPassword);
+//        person.setUserName(updatedUserName);
+//        person.setNuID(updatedNUID);
+//        person.setUserID(updatedUserID);
+//        person.setPassword(updatedPassword);
 
         // Update the table model to reflect the changes
-        model.setValueAt(updatedUserName, selectedRowIndex, 0);
-        model.setValueAt(updatedNUID, selectedRowIndex, 1);
-        model.setValueAt(updatedUserID, selectedRowIndex, 2);
-        model.setValueAt(updatedPassword, selectedRowIndex, 3);
+//        model.setValueAt(updatedUserName, selectedRowIndex, 0);
+//        model.setValueAt(updatedNUID, selectedRowIndex, 1);
+//        model.setValueAt(updatedUserID, selectedRowIndex, 2);
+//        model.setValueAt(updatedPassword, selectedRowIndex, 3);
 
         // No need for history.updateUser() here
 
@@ -346,10 +337,6 @@ public class ProfMangScheduleJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_CBwednesdayActionPerformed
 
-    private void txtMaxEnrollmentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMaxEnrollmentsActionPerformed
-        // TODO add your handling code here:
- btnProfUpdateCr//GEN-LAST:event_txtMaxEnrollmentsActionPerformed
-
     private String decryptPassword(String encryptedPassword) {
         try {
            
@@ -380,23 +367,22 @@ public class ProfMangScheduleJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblMaxEnrollments;
     private javax.swing.JLabel lblPrerequisites;
     private javax.swing.JTextField txtAddCourseName;
-    private javax.swing.JTextField txtMaxEnrollments;
     // End of variables declaration//GEN-END:variables
 
     private void populateTable() {
         
-        DefaultTableModel model = (DefaultTableModel) UserTable.getModel();
-        model.setRowCount(0);
-        
-        for(PersonLogin vs : history.getPerson()){
-            
-            Object[] row = new Object[4];
-            row[0] = vs.getUserName();
-            row[1] = vs.getNuID();
-            row[2] = vs.getUserID();
-            row[3] = vs.getPassword();
-            
-            model.addRow(row);
+//        DefaultTableModel model = (DefaultTableModel) UserTable.getModel();
+//        model.setRowCount(0);
+//        
+//        for(PersonLogin vs : history.getPerson()){
+//            
+//            Object[] row = new Object[4];
+//            row[0] = vs.getUserName();
+//            row[1] = vs.getNuID();
+//            row[2] = vs.getUserID();
+//            row[3] = vs.getPassword();
+//            
+//            model.addRow(row);
             
         }
         

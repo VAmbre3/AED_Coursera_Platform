@@ -184,8 +184,8 @@ public class ProfControlJPanel extends javax.swing.JPanel {
     private void btnProfMangScheduleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProfMangScheduleActionPerformed
         // TODO add your handling code here:
         
-        ProfMangScheduleJPanel adminMang = new ProfMangScheduleJPanel();
-        SplitProfPane.setRightComponent(adminMang);
+        ProfMangScheduleJPanel panelMang = new ProfMangScheduleJPanel();
+        SplitProfPane.setRightComponent(panelMang);
     }//GEN-LAST:event_btnProfMangScheduleActionPerformed
 
     private void btnProfAddCourseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProfAddCourseActionPerformed

@@ -30,7 +30,9 @@ public class ProfStudentGradeJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lblCourseDescription = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        lblstatus = new javax.swing.JLabel();
+        txtStudentName = new javax.swing.JTextField();
+        txtGrade = new javax.swing.JComboBox<>();
         lblManageUser = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblManageStudentGrade = new javax.swing.JTable();
@@ -40,15 +42,19 @@ public class ProfStudentGradeJPanel extends javax.swing.JPanel {
         lblStudentName = new javax.swing.JLabel();
         lblGrade = new javax.swing.JLabel();
         txtstatus = new javax.swing.JComboBox<>();
-        lblstatus = new javax.swing.JLabel();
-        txtStudentName = new javax.swing.JTextField();
-        txtGrade = new javax.swing.JComboBox<>();
 
         lblCourseDescription.setBackground(new java.awt.Color(204, 204, 204));
         lblCourseDescription.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblCourseDescription.setText("Course Description:");
 
-        jPanel1.setBackground(new java.awt.Color(255, 51, 51));
+        setBackground(new java.awt.Color(255, 51, 51));
+
+        lblstatus.setBackground(new java.awt.Color(204, 204, 204));
+        lblstatus.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblstatus.setForeground(new java.awt.Color(255, 255, 255));
+        lblstatus.setText("Status:");
+
+        txtGrade.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         lblManageUser.setBackground(new java.awt.Color(204, 204, 204));
         lblManageUser.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -70,25 +76,10 @@ public class ProfStudentGradeJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblManageStudentGrade);
 
         btnAdminView.setText("View User");
-        btnAdminView.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdminViewActionPerformed(evt);
-            }
-        });
 
         btnAdminDelete.setText("Delete User");
-        btnAdminDelete.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdminDeleteActionPerformed(evt);
-            }
-        });
 
         btnAdminUpdate.setText("Update User");
-        btnAdminUpdate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdminUpdateActionPerformed(evt);
-            }
-        });
 
         lblStudentName.setBackground(new java.awt.Color(204, 204, 204));
         lblStudentName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -102,184 +93,78 @@ public class ProfStudentGradeJPanel extends javax.swing.JPanel {
 
         txtstatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        lblstatus.setBackground(new java.awt.Color(204, 204, 204));
-        lblstatus.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblstatus.setForeground(new java.awt.Color(255, 255, 255));
-        lblstatus.setText("Status:");
-
-        txtStudentName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtStudentNameActionPerformed(evt);
-            }
-        });
-
-        txtGrade.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblGrade)
-                            .addComponent(lblstatus)
-                            .addComponent(lblStudentName, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(55, 55, 55)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtStudentName, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtstatus, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtGrade, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(165, 165, 165)
-                        .addComponent(lblManageUser))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnAdminUpdate)
-                            .addComponent(btnAdminView)
-                            .addComponent(btnAdminDelete))))
-                .addContainerGap(344, Short.MAX_VALUE))
-        );
-
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAdminDelete, btnAdminUpdate, btnAdminView});
-
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(lblManageUser, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(lblStudentName, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblGrade, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(txtStudentName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtGrade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(28, 28, 28)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblstatus, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtstatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(115, 115, 115)
-                .addComponent(btnAdminView)
-                .addGap(18, 18, 18)
-                .addComponent(btnAdminDelete)
-                .addGap(18, 18, 18)
-                .addComponent(btnAdminUpdate)
-                .addContainerGap(150, Short.MAX_VALUE))
-        );
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 41, Short.MAX_VALUE)
+                .addComponent(lblManageUser)
+                .addGap(611, 611, 611))
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 12, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(92, 92, 92)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addComponent(lblGrade)
+                                    .addGap(115, 115, 115))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addComponent(lblStudentName)
+                                    .addGap(64, 64, 64)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblstatus)
+                                .addGap(114, 114, 114)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtStudentName)
+                            .addComponent(txtstatus, 0, 193, Short.MAX_VALUE)
+                            .addComponent(txtGrade, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(431, 431, 431)
+                        .addComponent(btnAdminView)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnAdminDelete)
+                        .addGap(26, 26, 26)
+                        .addComponent(btnAdminUpdate))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(94, 94, 94)
+                .addComponent(lblManageUser)
+                .addGap(34, 34, 34)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblStudentName)
+                    .addComponent(txtStudentName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblGrade)
+                    .addComponent(txtstatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblstatus)
+                    .addComponent(txtGrade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 196, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAdminView)
+                    .addComponent(btnAdminDelete)
+                    .addComponent(btnAdminUpdate))
+                .addGap(212, 212, 212))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnAdminViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminViewActionPerformed
-        // TODO add your handling code here:
-
-        int selectedRowIndex = tblManageStudentGrade.getSelectedRow();
-
-        if (selectedRowIndex < 0) {
-            JOptionPane.showMessageDialog(this, "Please select a row to View.");
-            return;
-        }
-
-        DefaultTableModel model = (DefaultTableModel) tblManageStudentGrade.getModel();
-        PersonLogin person = history.getPerson().get(selectedRowIndex);
-        txtUserName.setText(String.valueOf(person.getUserName()));
-        txtUserPassword.setText(decryptPassword(person.getPassword()));
-        txtUserID.setText(String.valueOf(person.getUserID()));
-        txtNUID.setText(String.valueOf(person.getNuID() == null ? "" : person.getNuID()));
-
-    }//GEN-LAST:event_btnAdminViewActionPerformed
-
-    private void btnAdminDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminDeleteActionPerformed
-        // TODO add your handling code here:
-
-        int selectedRowIndex = tblManageStudentGrade.getSelectedRow();
-
-        if (selectedRowIndex<0) {
-            JOptionPane.showMessageDialog(this, "Please select a row to View.");
-            return;
-        }
-
-        DefaultTableModel model = (DefaultTableModel) tblManageStudentGrade.getModel();
-        PersonLogin person = history.getPerson().get(selectedRowIndex);
-
-        history.deletePerson(person);
-
-        JOptionPane.showMessageDialog(this, "User account deleted.");
-
-        populateTable();
-    }//GEN-LAST:event_btnAdminDeleteActionPerformed
-
-    private void btnAdminUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminUpdateActionPerformed
-        // TODO add your handling code here:
-        int selectedRowIndex = tblManageStudentGrade.getSelectedRow();
-
-        if (selectedRowIndex < 0) {
-            JOptionPane.showMessageDialog(this, "Please select a row to update.");
-            return;
-        }
-
-        DefaultTableModel model = (DefaultTableModel) tblManageStudentGrade.getModel();
-        PersonLogin person = history.getPerson().get(selectedRowIndex);
-
-        // Retrieve updated values from text fields
-        String updatedUserName = txtUserName.getText();
-        String updatedNUID = txtNUID.getText();
-        String updatedUserID = txtUserID.getText();
-        String updatedPassword = txtUserPassword.getText(); // You might want to encrypt it here if needed
-
-        // Update the PersonLogin object
-        person.setUserName(updatedUserName);
-        person.setNuID(updatedNUID);
-        person.setUserID(updatedUserID);
-        person.setPassword(updatedPassword);
-
-        // Update the table model to reflect the changes
-        model.setValueAt(updatedUserName, selectedRowIndex, 0);
-        model.setValueAt(updatedNUID, selectedRowIndex, 1);
-        model.setValueAt(updatedUserID, selectedRowIndex, 2);
-        model.setValueAt(updatedPassword, selectedRowIndex, 3);
-
-        // No need for history.updateUser() here
-
-        JOptionPane.showMessageDialog(this, "User account updated.");
-
-    }//GEN-LAST:event_btnAdminUpdateActionPerformed
-
-    private void txtStudentNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStudentNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtStudentNameActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdminDelete;
     private javax.swing.JButton btnAdminUpdate;
     private javax.swing.JButton btnAdminView;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblCourseDescription;
     private javax.swing.JLabel lblGrade;

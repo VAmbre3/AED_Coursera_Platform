@@ -43,6 +43,7 @@ public class HomeJFrame extends javax.swing.JFrame {
         lblTitle = new javax.swing.JLabel();
         BtnNewStudent = new javax.swing.JButton();
         BtnProfLogin1 = new javax.swing.JButton();
+        BtnEmployer = new javax.swing.JButton();
         PnlWorkArea = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -94,6 +95,16 @@ public class HomeJFrame extends javax.swing.JFrame {
             }
         });
 
+        BtnEmployer.setBackground(new java.awt.Color(200, 16, 46));
+        BtnEmployer.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BtnEmployer.setForeground(new java.awt.Color(255, 255, 255));
+        BtnEmployer.setText("Employer");
+        BtnEmployer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnEmployerActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PnlControlLayout = new javax.swing.GroupLayout(PnlControl);
         PnlControl.setLayout(PnlControlLayout);
         PnlControlLayout.setHorizontalGroup(
@@ -107,6 +118,10 @@ public class HomeJFrame extends javax.swing.JFrame {
                     .addComponent(BtnNewStudent, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BtnProfLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlControlLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BtnEmployer, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         PnlControlLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {BtnProfLogin, BtnStudentLogin});
@@ -126,7 +141,9 @@ public class HomeJFrame extends javax.swing.JFrame {
                 .addComponent(BtnNewStudent)
                 .addGap(81, 81, 81)
                 .addComponent(BtnProfLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(209, Short.MAX_VALUE))
+                .addGap(86, 86, 86)
+                .addComponent(BtnEmployer, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(85, Short.MAX_VALUE))
         );
 
         PnlControlLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {BtnNewStudent, BtnProfLogin, BtnStudentLogin});
@@ -186,7 +203,18 @@ public class HomeJFrame extends javax.swing.JFrame {
 
     private void BtnProfLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnProfLogin1ActionPerformed
         // TODO add your handling code here:
+         AdminLoginJPanel  adminPanel = new AdminLoginJPanel ();
+         SplitPane.setRightComponent(adminPanel);
+        
     }//GEN-LAST:event_BtnProfLogin1ActionPerformed
+
+    private void BtnEmployerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEmployerActionPerformed
+        // TODO add your handling code here:
+        EmployerLoginJPanel  EmployerPanel = new EmployerLoginJPanel();
+        SplitPane.setRightComponent(EmployerPanel);
+        
+        
+    }//GEN-LAST:event_BtnEmployerActionPerformed
 
     /**
      * @param args the command line arguments
@@ -226,6 +254,7 @@ public class HomeJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnEmployer;
     private javax.swing.JButton BtnNewStudent;
     private javax.swing.JButton BtnProfLogin;
     private javax.swing.JButton BtnProfLogin1;

@@ -31,11 +31,12 @@ public class ProfCourseHistoryJPanel extends javax.swing.JPanel {
         tblProfCourseHistory = new javax.swing.JTable();
         txtCourseDescription = new javax.swing.JTextField();
         lblCourseDescription = new javax.swing.JLabel();
+        btnview = new javax.swing.JButton();
 
         lblManageUser1.setBackground(new java.awt.Color(204, 204, 204));
         lblManageUser1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblManageUser1.setForeground(new java.awt.Color(255, 255, 255));
-        lblManageUser1.setText("Teaching History");
+        lblManageUser1.setForeground(new java.awt.Color(51, 51, 51));
+        lblManageUser1.setText("list of courses ");
 
         tblProfCourseHistory.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -61,23 +62,27 @@ public class ProfCourseHistoryJPanel extends javax.swing.JPanel {
         lblCourseDescription.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblCourseDescription.setText("Course Description:");
 
+        btnview.setText("view");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtCourseDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(26, 26, 26)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(lblCourseDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtCourseDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 519, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(lblManageUser1)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(34, 34, 34)
-                            .addComponent(lblCourseDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(555, Short.MAX_VALUE))
+                                .addComponent(lblManageUser1)))))
+                .addGap(28, 28, 28)
+                .addComponent(btnview)
+                .addContainerGap(455, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -85,7 +90,9 @@ public class ProfCourseHistoryJPanel extends javax.swing.JPanel {
                 .addGap(34, 34, 34)
                 .addComponent(lblManageUser1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnview))
                 .addGap(18, 18, 18)
                 .addComponent(lblCourseDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
@@ -100,6 +107,7 @@ public class ProfCourseHistoryJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnview;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblCourseDescription;
     private javax.swing.JLabel lblManageUser1;

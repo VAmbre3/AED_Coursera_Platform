@@ -45,6 +45,8 @@ public class StudentExploreCourseJPanel extends javax.swing.JPanel {
         txtRegion = new javax.swing.JTextField();
         lblLanguage = new javax.swing.JLabel();
         txtLanguage = new javax.swing.JTextField();
+        btnview = new javax.swing.JButton();
+        btnregistercourse = new javax.swing.JButton();
 
         lblBrowseCourse.setText("Browse Course");
 
@@ -78,6 +80,15 @@ public class StudentExploreCourseJPanel extends javax.swing.JPanel {
         lblRegion.setText("Region:");
 
         lblLanguage.setText("Language:");
+
+        btnview.setText("View");
+
+        btnregistercourse.setText("RGISTER COURSE");
+        btnregistercourse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnregistercourseActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -118,16 +129,21 @@ public class StudentExploreCourseJPanel extends javax.swing.JPanel {
                                     .addComponent(lblSchedule)
                                     .addComponent(lblLanguage))
                                 .addGap(291, 291, 291))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(lblCourseSchedule, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtLanguage, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(lblCourseSchedule, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtLanguage, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(182, 182, 182))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 498, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(jLabel1)
+                            .addGap(182, 182, 182))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 498, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnview))
                 .addGap(30, 30, 30))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(412, 412, 412)
+                .addComponent(btnregistercourse, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -165,18 +181,39 @@ public class StudentExploreCourseJPanel extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblDescription)))
+                            .addComponent(lblDescription)
+                            .addComponent(btnview)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(52, 52, 52)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(265, Short.MAX_VALUE))
+                .addGap(118, 118, 118)
+                .addComponent(btnregistercourse, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(107, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnregistercourseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnregistercourseActionPerformed
+        // TODO add your handling code here:
+        StudentRegisterJPanel panel1 = new StudentRegisterJPanel();
+        StudentRegisterJPanel 
+                
+                
+                
+                
+                JPanel panel1 = new JPanel();
+JPanel panel2 = new JPanel();
+                
+                
+                ProfLoginJPanel adminLog = new ProfLoginJPanel(SplitPane);
+        SplitPane.setRightComponent(adminLog);
+    }//GEN-LAST:event_btnregistercourseActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnViewSEC;
+    private javax.swing.JButton btnregistercourse;
+    private javax.swing.JButton btnview;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
